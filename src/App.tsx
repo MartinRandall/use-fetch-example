@@ -5,8 +5,10 @@ interface QuoteResponse {
   quote: string;
 }
 
+const quoteUrl = 'https://api.kanye.rest';
+
 function App() {
-  const {data, loading} = useFetch<QuoteResponse>('https://api.kanye.rest');
+  const {data, loading} = useFetch<QuoteResponse>(quoteUrl);
   return (
   
     <div className="App">
